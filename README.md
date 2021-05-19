@@ -1,6 +1,7 @@
 ## MLMXL (Masked Language Modeling Memory Transformer-XL) Pytorch
 
 This repository allows you to quickly setup unsupervised training for your transformer off a corpus of sequence data.
+训练一个mlm的TransformerXL模型
 
 ## Install
 
@@ -10,7 +11,7 @@ $ pip install git+https://github.com/napoler/mlmxl-pytorch
 
 ## Usage
 
-First `pip install reformer-pytorch`, then run the following example to see what one iteration of the unsupervised training is like
+First `pip install memory-transformer-xl`, then run the following example to see what one iteration of the unsupervised training is like
 
 ```python
 import torch
