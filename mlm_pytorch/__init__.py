@@ -1,1 +1,1 @@
-from mlm_pytorch.mlm_pytorch import MLM
+from mlm_pytorch.mlmxl_pytorch import MLMXL
