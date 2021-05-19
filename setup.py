@@ -8,7 +8,7 @@ setup(
   description = 'MLM (Masked Language Modeling) - Pytorch',
   author = 'Phil Wang',
   author_email = 'lucidrains@gmail.com',
-  url = 'https://github.com/lucidrains/mlm-pytorch',
+  url = 'https://github.com/napoler/mlmxl-pytorch',
   keywords = [
     'transformers',
     'artificial intelligence',
