@@ -1,4 +1,4 @@
-## MLM (Masked Language Modeling Memory Transformer-XL) Pytorch
+## MLMXL (Masked Language Modeling Memory Transformer-XL) Pytorch
 
 This repository allows you to quickly setup unsupervised training for your transformer off a corpus of sequence data.
 
