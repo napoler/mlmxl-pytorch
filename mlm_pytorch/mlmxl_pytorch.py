@@ -33,7 +33,7 @@ def get_mask_subset_with_prob(mask, prob):
 
 # main class
 
-class MLM(nn.Module):
+class MLMXL(nn.Module):
     def __init__(
         self,
         transformer,
@@ -47,6 +47,7 @@ class MLM(nn.Module):
         super().__init__()
 
         self.transformer = transformer
+        self.mem=None
 
         # mlm related probabilities
         self.mask_prob = mask_prob
@@ -88,9 +89,11 @@ class MLM(nn.Module):
 
         # mask out any tokens to padding tokens that were not originally going to be masked
         labels = input.masked_fill(~mask, self.pad_token_id)
-
+        if self.mem!=None:
         # get generator output and get mlm loss
-        logits = self.transformer(masked_input, **kwargs)
+          logits,self.mem = self.transformer(masked_input, memories = self.mem, **kwargs)
+        else:
+          logits,self.mem = self.transformer(masked_input, **kwargs)
 
         mlm_loss = F.cross_entropy(
             logits.transpose(1, 2),
